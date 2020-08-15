@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@WebServlet (name = "userCardsHandler", urlPatterns = {"/cards"}, loadOnStartup = 1)
+@WebServlet (name = "CartsHandler", urlPatterns = {"/carts"}, loadOnStartup = 1)
 public class ShoppingCartServlet extends HttpServlet {
 
     @Override
@@ -26,14 +26,14 @@ public class ShoppingCartServlet extends HttpServlet {
 
     private String generateWeb() {
         List<List<String>> items = new ArrayList<>();
-        for (Item item : Card.items) {
+        for (Item item : Cart.items) {
             List<String> row = Arrays.asList(
                     String.valueOf(item.id)
                     , item.name
                     , String.valueOf(item.price));
             items.add(row);
         }
-        JtwigTemplate template = JtwigTemplate.classpathTemplate("templates/userCards.twig");
+        JtwigTemplate template = JtwigTemplate.classpathTemplate("templates/userCarts.twig");
         JtwigModel model = JtwigModel.newModel();
         model.with("items", items);
         model.with("price", sumItemsCost());
@@ -42,7 +42,7 @@ public class ShoppingCartServlet extends HttpServlet {
 
     private int sumItemsCost() {
         int sum = 0;
-        for (Item item : Card.items) {
+        for (Item item : Cart.items) {
             sum += item.price;
         }
         return sum;

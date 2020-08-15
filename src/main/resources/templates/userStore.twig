@@ -49,12 +49,12 @@
     {% endfor %}
 </table>
 <br>
-<div style="text-decoration: underline; cursor: pointer;" class = "get--cards">Redirect to shopping cart!</div>
+<div style="text-decoration: underline; cursor: pointer;" class = "get--carts">Redirect to shopping cart!</div>
 <script>
     const xmlHttpRequest = new XMLHttpRequest();
-    const redirectBtn = document.querySelector(".get--cards");
+    const redirectBtn = document.querySelector(".get--carts");
     redirectBtn.addEventListener("click",()=>{
-        window.location.replace("/cards")
+        window.location.replace("/carts")
     });
     const addButtons = document.querySelectorAll('.btn--buy');
     const removeButtons = document.querySelectorAll('.btn--remove');

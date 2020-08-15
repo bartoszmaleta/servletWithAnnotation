@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@WebServlet (name = "userStoreHandler", urlPatterns = {"/webshop", "/webshop/buy", "/webshop/remove"}, loadOnStartup = 1)
+@WebServlet (name = "StoreHandler", urlPatterns = {"/webshop", "/webshop/buy", "/webshop/remove"}, loadOnStartup = 1)
 public class WebShopServlet extends HttpServlet {
     static List<Item> itemsInStock = initializeStoreItems();
 
@@ -86,10 +86,10 @@ public class WebShopServlet extends HttpServlet {
     }
 
     private void actionRemove(Item itemRequested) {
-        Card.removeItem(itemRequested);
+        Cart.removeItem(itemRequested);
     }
 
     private void actionBuy(Item itemRequested) {
-        Card.addItem(itemRequested);
+        Cart.addItem(itemRequested);
     }
 }
