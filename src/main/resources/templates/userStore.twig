@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>WebShop</title>
+    <title>Online Store</title>
 </head>
-<body style="background-color: blanchedalmond">
-<h1 style="font-weight:700; color:darkred">WebShop</h1>
+<body style="background-color: white">
+<h1 style="font-weight:700; color:blue">onlineStore</h1>
 
-<table>
+<table style="border: 1px solid red;">
     <tr>
         <th>Name</th>
         <th>Price</th>
@@ -17,12 +17,39 @@
         <tr class = {{ id[0] }}>
             <td>{{ id[1] }}</td>
             <td>{{ id[2] }}</td>
-            <td><button class="btn--buy" type="submit">BUY</button></td>
-            <td><button class="btn--remove" type="submit">REMOVE</button></td>
+            <td><button style="display: inline-block;
+                                        padding: 5px 25px;
+                                        font-size: 14px;
+                                        cursor: pointer;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        outline: none;
+                                        color: #fff;
+                                        background-color: #4CAF50;
+                                        border: none;
+                                        border-radius: 30px;
+                                        box-shadow: 0 6px #999;"
+                         class="btn--buy"
+                         type="submit">BUY</button></td>
+            <td><button style="display:
+                                        inline-block;
+                                        padding: 5px 25px;
+                                        font-size: 14px;
+                                        cursor: pointer;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        outline: none;
+                                        color: #fff;
+                                        background-color: red;
+                                        border: none;
+                                        border-radius: 30px;
+                                        box-shadow: 0 6px #999;"class="btn--buy"
+                        class="btn--remove" type="submit">REMOVE</button></td>
         </tr>
     {% endfor %}
 </table>
-<div style = " text-decoration: underline" class = "get--cards">Check shopping Card!</div>
+<br>
+<div style="text-decoration: underline; cursor: pointer;" class = "get--cards">Redirect to shopping cart!</div>
 <script>
     const xmlHttpRequest = new XMLHttpRequest();
     const redirectBtn = document.querySelector(".get--cards");
@@ -63,9 +90,6 @@
                 let response = xmlHttpRequest.responseText;
                 response = JSON.parse(response);
                 console.log(response);
-            }
-            if (xmlHttpRequest.status === 500) {
-                console.log("XD");
             }
         }
     };
