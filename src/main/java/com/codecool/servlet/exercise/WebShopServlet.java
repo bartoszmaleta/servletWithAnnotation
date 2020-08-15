@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -64,6 +65,23 @@ public class WebShopServlet extends HttpServlet {
             response.setStatus(200);
             response.getWriter().println(gson.toJson(itemRequested));
         }
+    }
+
+    private Item getObjectByRequest(HttpServletRequest request) {
+        StringBuffer sb = new StringBuffer();
+        Gson gson = new Gson();
+        String row = null;
+        Item item = null;
+        try {
+            BufferedReader br = request.getReader();
+            while ((row = br.readLine()) != null) {
+                sb.append(row);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        item = gson.fromJson(sb.toString(), Item.class);
+        return item;
     }
 
     private void actionRemove(Item itemRequested) {
