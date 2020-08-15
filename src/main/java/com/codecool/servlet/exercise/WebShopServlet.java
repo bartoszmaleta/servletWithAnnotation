@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// WEBSITE URL: http://localhost:8080/webshop
+
 @WebServlet (name = "StoreHandler", urlPatterns = {"/webshop", "/webshop/buy", "/webshop/remove"}, loadOnStartup = 1)
 public class WebShopServlet extends HttpServlet {
     static List<Item> itemsInStock = initializeStoreItems();

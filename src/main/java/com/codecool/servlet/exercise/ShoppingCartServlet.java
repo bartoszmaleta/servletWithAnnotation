@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// WEBSITE URL: http://localhost:8080/carts
+
 @WebServlet (name = "CartsHandler", urlPatterns = {"/carts"}, loadOnStartup = 1)
 public class ShoppingCartServlet extends HttpServlet {
 
