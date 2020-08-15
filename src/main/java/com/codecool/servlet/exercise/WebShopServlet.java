@@ -65,4 +65,12 @@ public class WebShopServlet extends HttpServlet {
             response.getWriter().println(gson.toJson(itemRequested));
         }
     }
+
+    private void actionRemove(Item itemRequested) {
+        Cart.removeItem(itemRequested);
+    }
+
+    private void actionBuy(Item itemRequested) {
+        Cart.addItem(itemRequested);
+    }
 }
