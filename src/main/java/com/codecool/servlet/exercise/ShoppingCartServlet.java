@@ -22,7 +22,6 @@ public class ShoppingCartServlet extends HttpServlet {
             resp.setStatus(200);
             resp.getWriter().println(generateWeb());
         }
-
     }
 
     private String generateWeb() {
@@ -39,7 +38,6 @@ public class ShoppingCartServlet extends HttpServlet {
         model.with("items", items);
         model.with("price", sumItemsCost());
         return template.render(model);
-
     }
 
     private int sumItemsCost() {
@@ -49,5 +47,4 @@ public class ShoppingCartServlet extends HttpServlet {
         }
         return sum;
     }
-
 }
