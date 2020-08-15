@@ -42,6 +42,7 @@ public class WebShopServlet extends HttpServlet {
                     , item.name
                     , String.valueOf(item.price)
             );
+            items.add(row);
         }
         JtwigTemplate template = JtwigTemplate.classpathTemplate("templates/userStore.twig");
         JtwigModel model = JtwigModel.newModel();
@@ -85,10 +86,10 @@ public class WebShopServlet extends HttpServlet {
     }
 
     private void actionRemove(Item itemRequested) {
-        Cart.removeItem(itemRequested);
+        Card.removeItem(itemRequested);
     }
 
     private void actionBuy(Item itemRequested) {
-        Cart.addItem(itemRequested);
+        Card.addItem(itemRequested);
     }
 }

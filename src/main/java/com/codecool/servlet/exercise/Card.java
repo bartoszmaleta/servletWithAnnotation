@@ -3,7 +3,7 @@ package com.codecool.servlet.exercise;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cart {
+public class Card {
     static List<Item> items = new ArrayList<>();
 
     static void addItem (Item item) {
