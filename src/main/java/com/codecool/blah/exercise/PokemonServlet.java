@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet (name = "PokemonHandler", urlPatterns = {"pokemons", "/pokemons/add", "/pokemons/remove"}, loadOnStartup = 3)
+@WebServlet (name = "PokemonHandler", urlPatterns = {"pokemons", "/pokemons/add", "/pokemons/remove"}, loadOnStartup = 1)
 public class PokemonServlet extends HttpServlet {
 
     @Override

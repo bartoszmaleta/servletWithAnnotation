@@ -1,0 +1,10 @@
+{
+  "databaseUrl": "jdbc:postgresql://localhost/thepokemonsdb",
+  "jdbcDriver": "org.postgresql.Driver",
+  "host": "ec2-46-137-100-204.eu-west-1.compute.amazonaws.com",
+  "port": "5432",
+  "database": "d6a8osfmuvq4h3",
+  "login": "postgres",
+  "password": "admin",
+  "test": "test"
+}

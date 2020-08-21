@@ -1,0 +1,10 @@
+{
+  "databaseUrl": "jdbc:postgresql://ec2-46-137-100-204.eu-west-1.compute.amazonaws.com:5432/d6a8osfmuvq4h3",
+  "jdbcDriver": "org.postgresql.Driver",
+  "host": "ec2-46-137-100-204.eu-west-1.compute.amazonaws.com",
+  "port": "5432",
+  "database": "d6a8osfmuvq4h3",
+  "login": "vviowpmysaljur",
+  "password": "b8f03f5b442dac4b367ff229ebe1a209edbbcaba9ae754d5053125801ce4d3ec",
+  "test": "test"
+}
