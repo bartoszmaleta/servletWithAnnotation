@@ -1,4 +1,4 @@
-package com.codecool.servlet.exercise;
+package com.codecool.blah.exercise;
 
 import com.google.gson.Gson;
 import org.jtwig.JtwigModel;
@@ -35,6 +35,7 @@ public class WebShopServlet extends HttpServlet {
             response.getWriter().println(constructWebpage());
         }
     }
+
 
     private String constructWebpage() {
         List<List<String>> items = new ArrayList<>();

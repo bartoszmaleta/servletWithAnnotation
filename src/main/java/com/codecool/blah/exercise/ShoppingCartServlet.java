@@ -1,4 +1,4 @@
-package com.codecool.servlet.exercise;
+package com.codecool.blah.exercise;
 
 import org.jtwig.JtwigModel;
 import org.jtwig.JtwigTemplate;

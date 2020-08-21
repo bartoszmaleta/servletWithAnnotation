@@ -1,4 +1,4 @@
-package com.codecool.servlet;
+package com.codecool.blah;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

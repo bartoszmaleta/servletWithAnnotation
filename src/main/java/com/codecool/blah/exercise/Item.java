@@ -1,4 +1,4 @@
-package com.codecool.servlet.exercise;
+package com.codecool.blah.exercise;
 
 public class Item {
     String id;

@@ -1,4 +1,4 @@
-package com.codecool.servlet.exercise;
+package com.codecool.blah.exercise;
 
 import java.util.Arrays;
 import java.util.List;
